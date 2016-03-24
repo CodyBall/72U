@@ -9,7 +9,7 @@ img.onload = function() {
     ctx.drawImage(this, 0, 0);
     
     /// enable mouse click
-    brainCanvas.onclick = function(e) {
+    brainCanvas.onmousehover = function(e) {
         
         /// adjust mouse position to be relative to canvas
         var rect = brainCanvas.getBoundingClientRect(),
