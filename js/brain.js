@@ -9,7 +9,7 @@ img.onload = function() {
     ctx.drawImage(this, 0, 0);
     
     /// enable mouse click
-    brainCanvas.onmousehover = function(e) {
+    brainCanvas.onmouseover = function(e) {
         
         /// adjust mouse position to be relative to canvas
         var rect = brainCanvas.getBoundingClientRect(),
@@ -23,8 +23,11 @@ img.onload = function() {
         /// this of course assumes the map has transparent areas.
         /// if not just check for the color values instead.
         if (data[3] > 0) {
+					$(brainCanvas).css("cursor:pointer");
             alert('Land ahoy!');
-        }
+				} else {
+					$(brainCanvas).css("cursor:auto");
+				}
     };
 };
 
