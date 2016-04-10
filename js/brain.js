@@ -1,35 +1,35 @@
-var brainCanvas = document.getElementById("brainCanvas");
-var ctx = brainCanvas.getContext('2d'),
-    img = new Image();
 
-/// we need to wait for the image to actually load:
-img.onload = function() {
+var $popup = $('#brain-popup');
+var popup = document.getElementById("brain-popup");
+var height = $popup.height();
 
-    /// image is loaded and we can raw it onto canvas
-    ctx.drawImage(this, 0, 0);
-    
-    /// enable mouse click
-    brainCanvas.onmouseover = function(e) {
-        
-        /// adjust mouse position to be relative to canvas
-        var rect = brainCanvas.getBoundingClientRect(),
-            x = e.clientX - rect.left,
-            y = e.clientY - rect.top;
-        
-        /// grab a pixel
-        var data = ctx.getImageData(x, y, 1, 1).data;
-        
-        /// check it's alpha value to see if we're in a map point
-        /// this of course assumes the map has transparent areas.
-        /// if not just check for the color values instead.
-        if (data[3] > 0) {
-					$(brainCanvas).css("cursor:pointer");
-            alert('Land ahoy!');
-				} else {
-					$(brainCanvas).css("cursor:auto");
-				}
-    };
-};
+function setImage(that) {
+	var id = $(that).attr('id');
+	var image = './Pictures/' + id + '.jpg';
+	popup.src = image;
+	setTimeout(showImage, 50);
+}
 
-/// get an image from a domain that allow cross-origin (or from the same server as the page)
-img.src = 'Pictures/PS-new\ american\ dream.png ';
+function moveImage(x, y) {
+	var width = $popup.width();
+	$popup.css({
+		'left': x - (width / 2),
+		'top': y - (height/ 2)
+	});
+}
+
+function mouseShowImage(event) {
+	setImage(this);
+	moveImage(event.pageX, event.pageY);
+}
+
+function showImage(event) {
+	$popup.removeClass('brain-hidden');
+}
+
+function hideImage(event) {
+	$popup.addClass('brain-hidden');
+}
+
+$('.brain-text').click(mouseShowImage);
+$('#brain-popup').on('mouseleave', hideImage);

@@ -1,0 +1,68 @@
+#brain-container {
+	display: inline-block;
+	position: relative;
+	width: 90%;
+}
+
+#brain-dummy {
+	margin-top: 100%
+}
+
+#brain-svg {
+	background-image: url(../Pictures/brain.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+}
+
+#brain-popup {
+	position: absolute;
+	height: 77vh;
+	width: auto;
+}
+
+.brain-hidden {
+	display: none;
+}
+
+.brain-text {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 2.5vh;
+	cursor: pointer;
+	fill: #42dca3;
+}
+
+#brain-dream {
+	font-size: 3vh;
+}
+
+#brain-social {
+	font-size: 2.5vh;
+}
+
+#brain-police {
+	font-size: 3.2vh;
+}
+
+#brain-gun {
+	font-size: 2.8vh;
+}
+
+#brain-antibiotic {
+	font-size: 3vh;
+}
+
+#brain-fail {
+	font-size: 3.5vh;
+}
+
+#brain-wild {
+	font-size: 2.5vh;
+}
