@@ -24,23 +24,12 @@
 	height: 100%;
 }
 
-#brain-popup {
-	position: absolute;
-	height: 90vh;
-	width: auto;
-}
-
-.brain-hidden {
-	display: none;
-}
-
 .brain-text {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 2.5vw;
 	cursor: pointer;
 	fill: #42dca3;
 }
-
 
 /* different font sizes for each brain element */
 #brain-dream {

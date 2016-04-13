@@ -18,6 +18,7 @@
     <link href="css/grayscale.css" rel="stylesheet">
     <link href="css/brain.css" rel="stylesheet">
     <link href="css/lightbox.min.css" rel="stylesheet">
+    <link href="css/lightbox-video.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,19 +31,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-		<script>
-/*
-			$('.intro-body').tooltip({
-					selector: "a[rel=tooltip]"
-			})
-*/
-			$(document).ready(function(){
-				$('[data-toggle="tooltip"]').tooltip(); 
-			});
-		</script>
 
 </head>
 
@@ -85,11 +73,8 @@
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Hi there, I'm Cody</h1>
 												<p class="intro-text">My roots are in filmmaking; with skills in <br>
-												<a title='<iframe src="https://player.vimeo.com/video/158819918?autoplay=1&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' 
-													data-toggle="tooltip"
-													data-html="true"
-												 	data-placement="bottom" 
-													rel="tooltip" href="#">CINEMATOGRAPHY</a>, EDITING, and SOUND DESIGN, I find the most unique ways I can to tell stories.</p>
+												<a href="#" class="link-lightbox" data-videoid="158819918" data-videosite="vimeo">CINEMATOGRAPHY</a>
+													, EDITING, and SOUND DESIGN, I find the most unique ways I can to tell stories.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -103,6 +88,7 @@
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+								<img class="about-image" src="./Pictures/brain-antibiotic.jpg">
                 <h2>BUT I'm interested in much more than just filmmaking!</h2>
                 <p>Maybe it has something to do with the hundreds of <a href="http://startbootstrap.com/template-overviews/grayscale/">TED TALKS</a> that I have sound edited, but I'm obsessed with learning. Some of my interests include:</p>
             </div>
@@ -186,7 +172,7 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -197,6 +183,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
     <script src="js/lightbox.min.js"></script>
+    <script src="js/lightbox-video.min.js"></script>
 
 </body>
 
