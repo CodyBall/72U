@@ -2,6 +2,8 @@
 	display: inline-block;
 	position: relative;
 	width: 90%;
+	max-width: 648px;
+	margin-bottom: 100px;
 }
 
 #brain-dummy {
@@ -24,7 +26,7 @@
 
 #brain-popup {
 	position: absolute;
-	height: 77vh;
+	height: 90vh;
 	width: auto;
 }
 
@@ -34,35 +36,72 @@
 
 .brain-text {
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 2.5vh;
+	font-size: 2.5vw;
 	cursor: pointer;
 	fill: #42dca3;
 }
 
+
+/* different font sizes for each brain element */
 #brain-dream {
-	font-size: 3vh;
+	font-size: 2.5vw;
 }
 
 #brain-social {
-	font-size: 2.5vh;
+	font-size: 2.5vw;
 }
 
 #brain-police {
-	font-size: 3.2vh;
+	font-size: 3.2vw;
 }
 
 #brain-gun {
-	font-size: 2.8vh;
+	font-size: 2.8vw;
 }
 
 #brain-antibiotic {
-	font-size: 3vh;
+	font-size: 3vw;
 }
 
 #brain-fail {
-	font-size: 3.5vh;
+	font-size: 3vw;
 }
 
 #brain-wild {
-	font-size: 2.5vh;
+	font-size: 2.5vw;
+}
+
+/* setting max font-size based on screen width */
+@media all and (min-width: 750px) {
+	.brain-text {
+		font-size: 19px;
+	}
+
+	#brain-dream {
+		font-size: 19px;
+	}
+
+	#brain-social {
+		font-size: 19px;
+	}
+
+	#brain-police {
+		font-size: 24px;
+	}
+
+	#brain-gun {
+		font-size: 22px;
+	}
+
+	#brain-antibiotic {
+		font-size: 23px;
+	}
+
+	#brain-fail {
+		font-size: 23px;
+	}
+
+	#brain-wild {
+		font-size: 19px;
+	}
 }
